@@ -56,21 +56,9 @@ jobs:
           npm audit
 
       # TODO: add unit testing
-      name: supply chain scanning
+      name: unit testing
         working-directory: app
         run: |
           npm test
-
-      # TODO: add cloudformation linting
-      name: linting
-        working-directory: app
-        run: |
-          npm run lint
-
-      # TODO: add deployment to cloudformation
-      name: deploy
-        working-directory: app
-        run: |
-          npm run lint
 
       - run: echo "🍏 This job's status is ${{ job.status }}."
